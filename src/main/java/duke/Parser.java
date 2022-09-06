@@ -106,7 +106,6 @@ public class Parser {
             LocalDateTime date = stringToDate(tempDate);
             t = new Deadline(desc, date);
         } else {
-            assert type.equals("E") : "Should only be Event type of Task left";
             t = new Event(arguments);
         }
         if (splitInput[1].equals("1")) {

@@ -50,7 +50,7 @@ public class Storage {
         } catch (IOException e) {
             System.out.println("Directory does not exist, creating new directory now");
             File f = new File("data");
-            assert f.mkdir() : "mkdir should return true";
+            f.mkdir();
             writeToTaskList(filePath, taskList);
         }
     }
